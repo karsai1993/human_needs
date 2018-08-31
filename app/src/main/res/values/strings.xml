@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HumanNeeds</string>
+    <string name="main_welcome">Welcome to HumanNeeds!</string>
+    <string name="main_description">By this app, you have a unique opportunity to get a
+        picture about your needs.\nBased on these, you receive some characteristics about yourself.</string>
+    <string name="powered_by_header">Powered by</string>
+    <string name="powered_by_value">László Karsai</string>
+    <string name="main_edit_text_hint">Type your name&#8230;</string>
+    <string name="main_name_empty">Please, type your name to continue!</string>
+    <string name="main_btn_text">Start</string>
+    <string name="problem">Problem occurred.</string>
+
+    <string name="statements_header_part">Get your needs,\u0020</string>
+    <string name="statements_show_result_btn">Click to view the results!</string>
+
+    <string-array name="statements">
+        
+    </string-array>
+</resources>
