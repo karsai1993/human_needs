@@ -3,6 +3,8 @@
     <solid
         android:color="@android:color/white"/>
     <stroke
-        android:color="@android:color/black"
+        android:color="@color/colorAccent"
         android:width="@dimen/process_bar_stroke"/>
+    <corners
+        android:radius="@dimen/corner_size"/>
 </shape>

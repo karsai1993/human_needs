@@ -3,17 +3,122 @@
     <string name="main_welcome">Welcome to HumanNeeds!</string>
     <string name="main_description">By this app, you have a unique opportunity to get a
         picture about your needs.\nBased on these, you receive some characteristics about yourself.</string>
-    <string name="powered_by_header">Powered by</string>
-    <string name="powered_by_value">László Karsai</string>
-    <string name="main_edit_text_hint">Type your name&#8230;</string>
+
+    <!--string name="info1">By using the app, you accept the</string>
+    <string name="info2">Terms of Use</string>
+    <string name="info3">and the</string>
+    <string name="info4">Privacy Policy</string-->
+
+    <string name="main_edit_text_hint">Please, type your name!</string>
     <string name="main_name_empty">Please, type your name to continue!</string>
     <string name="main_btn_text">Start</string>
     <string name="problem">Problem occurred.</string>
 
-    <string name="statements_header_part">Get your needs,\u0020</string>
+    <string name="statements_header_part">\'s human needs</string>
     <string name="statements_show_result_btn">Click to view the results!</string>
 
+    <string name="question">How do you feel about the following statements?</string>
+    <string name="fragment_answer1">Absolutely agree</string>
+    <string name="fragment_answer2">Agree</string>
+    <string name="fragment_answer3">Partly agree</string>
+    <string name="fragment_answer4">Disagree</string>
+    <string name="fragment_answer5">Absolutely disagree</string>
+
+    <string name="of">\u0020of\u0020</string>
+
+    <!--string name="privacy_policy">https://sites.google.com/view/humanneeds-en-privacy-policy</string>
+    <string name="terms_of_use">https://sites.google.com/view/humanneeds-en-terms</string-->
+    <string name="agree_terms_privacy">By continuing, you agree
+        to the &lt;a href=https://sites.google.com/view/humanneeds-en-terms>Terms of Use&lt;/a> and
+        the &lt;a href=https://sites.google.com/view/humanneeds-en-privacy-policy>Privacy Policy&lt;/a>.</string>
+
+    <string name="statements_missing">It seems you have gone through the statements
+        but meanwhile, you missed one or more:\u0020</string>
+
     <string-array name="statements">
-        
+        <item>People are impressed by me.</item>
+        <item>Feeling that I belong is important to me.</item>
+        <item>I need to feel grounded.</item>
+        <item>I don\'t mind taking risks.</item>
+        <item>I don\'t fear change.</item>
+        <item>A failure is not a failure if you keep trying.</item>
+        <item>I believe in giving back.</item>
+        <item>I\'m good at taking care of people.</item>
+        <item>I often worry about what people are saying about me.</item>
+        <item>I like to have as much stability in my life as possible.</item>
+        <item>It’s important to contribute to your community.</item>
+        <item>I like to develop new ideas and projects.</item>
+        <item>I\'m security conscious.</item>
+        <item>I like to be an example to others.</item>
+        <item>I\'m competitive.</item>
+        <item>I hate the feeling of boredom.</item>
+        <item>I know how to make connections with people.</item>
+        <item>I constantly aspire to improve.</item>
+        <item>Danger is never exciting to me.</item>
+        <item>In most close relationships I\'m usually the giver.</item>
+        <item>There is always something new to be learned.</item>
+        <item>I need to feel fulfilled.</item>
+        <item>I frequently evaluate myself.</item>
+        <item>I like for things to be predictable.</item>
+        <item>I am more loving than most people.</item>
+        <item>Recognition is very important to me.</item>
+        <item>I like the feeling of exertion.</item>
+        <item>I\'m very careful of not over spending.</item>
+        <item>Education is important to me.</item>
+        <item>I\'m a leader.</item>
+        <item>I\'m always looking for new experiences.</item>
+        <item>I sometimes over extend myself trying to help others.</item>
+        <item>My routines and habits are important to me.</item>
+        <item>I take pride in who I am.</item>
+        <item>I like how learning something new changes my perspective.</item>
+        <item>Sometimes the most important work is not what you get paid for.</item>
+        <item>I\'m not an adventurous person.</item>
+        <item>No one would say that I\'m selfish.</item>
+        <item>I tend to spend beyond my limits.</item>
+        <item>I like to feel important.</item>
+        <item>Every failure is a learning experience.</item>
+        <item>I like to learn in order to teach what I learn.</item>
+        <item>I seek unity in my relationship.</item>
+        <item>I like to make a difference.</item>
+        <item>If I don\'t know the consequences, I refrain from acting.</item>
+        <item>I suffer when I feel blocked.</item>
+        <item>I enjoy suspense.</item>
+        <item>Prestige is very important to me.</item>
+        <item>I\'m a romantic.</item>
+        <item>I\'m constantly learning.</item>
+        <item>Giving is more important to me than receiving.</item>
+        <item>I like to be number one.</item>
+        <item>I hate taking risks of any kind.</item>
+        <item>I like to constantly develop myself.</item>
+        <item>I like to give my energy to good causes.</item>
+        <item>I like to be admired by others.</item>
+        <item>I\'m proud of my ability to learn new things.</item>
+        <item>We are here to make this world a better place.</item>
+        <item>I like to grow and develop in different areas.</item>
+        <item>Personal relationships are the most important thing in my life.</item>
+        <item>Sometimes I can be intimidating.</item>
+        <item>I often look for new forms of entertainment.</item>
+        <item>I\'m concerned about anything that might be risky.</item>
+        <item>Being fulfilled by work is more important than being admired.</item>
+        <item>I strive to improve my skills.</item>
+        <item>I get close to people by being generous with time, money &amp; energy.</item>
+        <item>I like to think carefully before I go into action.</item>
+        <item>Sometimes I like the thrill of experiencing fear.</item>
+        <item>I need to feel respected.</item>
+        <item>When we stop growing, we die.</item>
+        <item>The feeling of togetherness is important to me.</item>
+        <item>For life to make sense, you have to leave a mark in the world.</item>
+        <item>Feeling comfortable at all times is important to me.</item>
+        <item>I enjoy being involved in many different activities.</item>
+        <item>I\'m always comparing myself to others in terms of success.</item>
+        <item>I need to have passion in my relationship.</item>
+        <item>If I\'m not contributing to others, my life is meaningless.</item>
+        <item>When making a decision, I think about what is most enjoyable.</item>
+        <item>I can\'t stand to feel stagnant.</item>
+        <item>I need to feel as safe as possible at all times.</item>
+        <item>If I commit, I worry that I\'ll miss out on something better.</item>
+        <item>I never want to be seen as a loser.</item>
+        <item>I don\'t care about having much stability in my life.</item>
+        <item>I have a mission.</item>
     </string-array>
 </resources>

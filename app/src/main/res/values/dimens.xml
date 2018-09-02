@@ -4,8 +4,9 @@
     <dimen name="distance">8dp</dimen>
     <dimen name="small_distance">4dp</dimen>
     <dimen name="big_size">25sp</dimen>
+    <dimen name="medium_size">20sp</dimen>
+    <dimen name="small_size">16sp</dimen>
     <dimen name="process_bar_height">20dp</dimen>
-    <dimen name="process_bar_inner_height">20dp</dimen>
     <dimen name="process_bar_stroke">1dp</dimen>
     <dimen name="corner_size">10dp</dimen>
 </resources>
