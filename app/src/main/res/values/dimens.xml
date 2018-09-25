@@ -9,4 +9,6 @@
     <dimen name="process_bar_height">20dp</dimen>
     <dimen name="process_bar_stroke">1dp</dimen>
     <dimen name="corner_size">10dp</dimen>
+    <dimen name="pb_size">42dp</dimen>
+    <dimen name="about_photo_size">60dp</dimen>
 </resources>

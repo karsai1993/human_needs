@@ -30,28 +30,23 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_answer1"
-                android:id="@+id/rb_answer1"/>
+                android:text="@string/fragment_answer1" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_answer2"
-                android:id="@+id/rb_answer2"/>
+                android:text="@string/fragment_answer2" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_answer3"
-                android:id="@+id/rb_answer3"/>
+                android:text="@string/fragment_answer3" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_answer4"
-                android:id="@+id/rb_answer4"/>
+                android:text="@string/fragment_answer4" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_answer5"
-                android:id="@+id/rb_answer5"/>
+                android:text="@string/fragment_answer5" />
 
         </RadioGroup>
 

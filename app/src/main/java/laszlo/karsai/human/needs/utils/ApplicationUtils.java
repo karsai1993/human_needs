@@ -2,12 +2,15 @@ package laszlo.karsai.human.needs.utils;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.text.Html;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,15 +28,29 @@ public class ApplicationUtils {
     public static final String STATEMENT_POS = "statement_pos";
     public static final String NAME = "name";
     private static final String USER_WENT_THROUGH = "user_went_through";
-    private static final String USER_DONE = "user_done";
+    public static final String SCORES = "scores";
+    public static final String IS_LEAST = "is_least";
     public final static int COUNT = 84;
+    public final static String NEED = "need";
 
-    public static void showError(Context context) {
+    public static void exit(Context context) {
         Toast.makeText(
                 context,
                 context.getResources().getString(R.string.problem),
                 Toast.LENGTH_LONG
         ).show();
+        ((Activity) context).finish();
+    }
+
+    public static void addHyperlinkedText(TextView textView, String text) {
+        Spanned spanned;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            spanned = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            spanned = Html.fromHtml(text);
+        }
+        textView.setText(spanned);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     public static void saveValueToPrefs(Context context, String name, int position, int value) {
@@ -103,43 +120,26 @@ public class ApplicationUtils {
                 .toString();
     }
 
-    public static void saveUserDoneValueToPrefs(Context context, String name) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = preferences.edit();
-
-        editor.putBoolean(createUserDonePrefKey(context, name), true);
-        editor.apply();
-    }
-
-    public static boolean getUserDoneValueFromPrefs(Context context, String name) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getBoolean(createUserDonePrefKey(context, name), false);
-    }
-
-    private static String createUserDonePrefKey(Context context, String name) {
-        return new StringBuilder()
-                .append(context.getResources().getString(R.string.app_name))
-                .append("_")
-                .append(USER_DONE)
-                .append("_")
-                .append(name)
-                .toString();
-    }
-
     public static void updateProgressStatus(
             TextView textView,
             final View containerView,
             final View view,
+            Button btnShowResult,
             Context context,
             String name) {
         int setDataCounter = 0;
-        for (int i = 0; i < ApplicationUtils.COUNT; i++) {
-            int storedValue = ApplicationUtils.getValueFromPrefs(context, name, i);
+        for (int i = 0; i < COUNT; i++) {
+            int storedValue = getValueFromPrefs(context, name, i);
             if (storedValue != -1) {
                 setDataCounter ++;
             }
         }
-        final double ratio = (double) setDataCounter / ApplicationUtils.COUNT;
+        final double ratio = (double) setDataCounter / COUNT;
+        if (ratio == 1) {
+            btnShowResult.setVisibility(View.VISIBLE);
+        } else {
+            btnShowResult.setVisibility(View.GONE);
+        }
         double percentageValueRounded = round(ratio * 100);
         containerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -169,14 +169,6 @@ public class ApplicationUtils {
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
-    }
-
-    public static void openWebPage (Context context, String url) {
-        Uri webPage = Uri.parse(url);
-        Intent openWebPageIntent = new Intent(Intent.ACTION_VIEW, webPage);
-        if (openWebPageIntent.resolveActivity(context.getPackageManager()) != null) {
-            context.startActivity(openWebPageIntent);
-        }
     }
 
     public static void showNotAnsweredStatementsIfAny(
@@ -211,8 +203,8 @@ public class ApplicationUtils {
 
     private static List<Integer> getMissingStatementSequences(Context context, String name) {
         List<Integer> missingList = new ArrayList<>();
-        for (int i = 0; i < ApplicationUtils.COUNT; i++) {
-            int storedValue = ApplicationUtils.getValueFromPrefs(context, name, i);
+        for (int i = 0; i < COUNT; i++) {
+            int storedValue = getValueFromPrefs(context, name, i);
             if (storedValue == -1) {
                 missingList.add(i + 1);
             }

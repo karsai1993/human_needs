@@ -19,7 +19,6 @@
 
     <TextView
         android:layout_below="@id/tv_welcome"
-        android:id="@+id/tv_small_description"
         style="@style/AppTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +49,6 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_start"
             android:layout_marginTop="@dimen/distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,48 +71,5 @@
         android:textStyle="bold"
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"/>
-
-    <!--LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true">
-
-        <TextView
-            style="@style/AppTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="@string/info1"/>
-        <TextView
-            android:id="@+id/tv_main_privacy_policy"
-            style="@style/AppTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"
-            android:text="@string/info2"/>
-        <TextView
-            style="@style/AppTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="@string/info3"/>
-        <TextView
-            android:id="@+id/tv_main_terms"
-            style="@style/AppTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"
-            android:text="@string/info4"/>
-    </LinearLayout-->
 
 </RelativeLayout>
